@@ -6,8 +6,8 @@ const App = () => {
     const [seconds, setSeconds] = useState('00');
 
     useEffect(() => {
-        const startTimeString = "2024-06-05T21:49:00"; // Start time in UTC
-        const durationInMilliseconds = 480 * 60 * 60 * 1000;
+        const startTimeString = "2024-06-25T22:00:00"; // Start time in UTC
+        const durationInMilliseconds = 48 * 60 * 60 * 1000;
 
         const startTime = new Date(startTimeString);
         const endTime = startTime.getTime() + durationInMilliseconds;

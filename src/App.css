@@ -25,13 +25,13 @@ body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-family: var(--font-family);
-    font-size: 200px;
+    font-size: 240px;
 }
 
 .span-element{
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    width: 290px !important;
+    width: 330px !important;
     /* border: 2px solid #E3E3E3; */
 }
