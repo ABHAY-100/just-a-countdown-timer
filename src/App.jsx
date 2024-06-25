@@ -6,7 +6,7 @@ const App = () => {
     const [seconds, setSeconds] = useState('00');
 
     useEffect(() => {
-        const startTimeString = "2024-06-06T20:00:00"; // Start time in UTC
+        const startTimeString = "2024-06-05T21:49:00"; // Start time in UTC
         const durationInMilliseconds = 480 * 60 * 60 * 1000;
 
         const startTime = new Date(startTimeString);
@@ -35,7 +35,6 @@ const App = () => {
 
         const intervalId = setInterval(updateCountdown, 1000);
 
-        // Initial update when component mounts
         updateCountdown();
 
         return () => clearInterval(intervalId);
