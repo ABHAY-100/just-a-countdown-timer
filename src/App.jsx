@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
 const App = () => {
     const [hours, setHours] = useState('00');
@@ -6,51 +6,48 @@ const App = () => {
     const [seconds, setSeconds] = useState('00');
 
     useEffect(() => {
-        const startTimeString = "2024-06-25T22:00:00"; // Start time in UTC
-        const durationInMilliseconds = 48 * 60 * 60 * 1000;
-
+        const startTimeString = "2024-06-26T02:05:00"; // Start time in UTC
         const startTime = new Date(startTimeString);
+
+        const durationInMilliseconds = 7 * 60 * 60 * 1000; // Duration in milliseconds
         const endTime = startTime.getTime() + durationInMilliseconds;
 
-        const updateCountdown = () => {
+        const updateCountDown = () => {
             const now = new Date().getTime();
 
-            if (now >= endTime) {
+            if(now >= endTime){
                 setHours('00');
                 setMinutes('00');
                 setSeconds('00');
                 return;
             }
 
-            const remainingTime = endTime - now;
+            const distance = endTime - now;
 
-            const remainingHours = Math.floor(remainingTime / (1000 * 60 * 60));
-            const remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-            const remainingSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+            const remainingHours = Math.floor(distance / (1000 * 60 * 60));
+            const remainingMinutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const remainingSeconds = Math.floor((distance % (1000 * 60)) / (1000));
 
             setHours(String(remainingHours).padStart(2, '0'));
             setMinutes(String(remainingMinutes).padStart(2, '0'));
             setSeconds(String(remainingSeconds).padStart(2, '0'));
-        };
+        }
+        const intervalID = setInterval(updateCountDown, 1000);
 
-        const intervalId = setInterval(updateCountdown, 1000);
+        updateCountDown();
 
-        updateCountdown();
-
-        return () => clearInterval(intervalId);
-    }, []);
+        return () => clearInterval(intervalID);
+    },[]);
 
     return (
-        <div className='container'>
-            <div className="display-time">
-                <span className='span-element'>{hours}</span>
-                <span> : </span>
-                <span className='span-element'>{minutes}</span>
-                <span> : </span>
-                <span className='span-element'>{seconds}</span>
-            </div>
+        <div className="container">
+            <span className="span-element">{hours}</span>
+            <span> : </span>
+            <span className="span-element">{minutes}</span>
+            <span> : </span>
+            <span className="span-element">{seconds}</span>
         </div>
-    );
-};
+    )
+}
 
 export default App;
