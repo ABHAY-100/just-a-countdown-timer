@@ -2,7 +2,7 @@
 
 This is a simple countdown timer component built using React. 
 
-**Features:**
+**Features :**
 
 * Counts down from a specified duration in seconds.
 * Displays the remaining time in a user-friendly format (hours, minutes, seconds).
@@ -10,7 +10,7 @@ This is a simple countdown timer component built using React.
 
 ## Sneak Peek
 
-[![countdown](public/assets/countdown-mockup.png)](https://just-a-countdown-timer.onrender.com)
+[![countdown](public/assets/countdown-mockup.png)](https://github.com/ABHAY-100/just-a-countdown-timer)
 
 ## Quick Start
 
@@ -49,6 +49,7 @@ const durationInMilliseconds = 7 * 60 * 60 * 1000; // Set duration in millisecon
 ```bash
 npm start
 ```
+Visit http://localhost:3000 in your web browser to view the website
 
 ## Build With
 ![My Skills](https://skillicons.dev/icons?i=js,html,css,react)
