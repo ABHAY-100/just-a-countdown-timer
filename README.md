@@ -56,5 +56,6 @@ Visit http://localhost:3000 in your web browser to view the website
 
 <br/>
 Thank you for your interest! 🤝
-<br/>
-![visitors](https://visitor-badge.laobi.icu/badge?ABHAY-100=just-a-countdown-timer)
+<br/><br/>
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=ABHAY-100.just-a-countdown-timer)
