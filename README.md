@@ -2,12 +2,6 @@
 
 This is a simple countdown timer component built using React. 
 
-**Features :**
-
-* Counts down from a specified duration in seconds.
-* Displays the remaining time in a user-friendly format (hours, minutes, seconds).
-* Lightweight and easy to integrate into your React projects.
-
 ## Preview
 
 [![countdown](public/assets/countdown-mockup.png)](https://github.com/ABHAY-100/just-a-countdown-timer)
